@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
 <form action="javascript:void(0);">
     First name: <input id="firstname" type="text" name="fname"><br>
     Last name: <input id="lastname" type="text" name="lname"><br>
@@ -16,24 +15,5 @@
 <div id="myDiv"></div>
 
 </body>
-
-
-<script>
-    $("#submitButton").click(function(){
-        var firstName = document.getElementById("firstname").value;
-        var lastName = document.getElementById("lastname").value;
-
-        $.post("/myPost",
-            {
-                firstname: firstName,
-                lastname: lastName
-            },
-            function(data, status){
-                alert("Data: " + data.fullname + "\nStatus: " + status);
-                document.getElementById("myDivId").innerHTML_="Data: " + data.fullname + "\nStatus: " + status
-            });
-    });
-</script>
-
+<script src = "public/execute.js" />
 </html>
-
