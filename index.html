@@ -29,7 +29,8 @@
                 lastname: lastName
             },
             function(data, status){
-                alert("Data: " + data.testdata + "\nStatus: " + status);
+                alert("Data: " + data.fullname + "\nStatus: " + status);
+                document.getElementById("myDivId").innerHTML_="Data: " + data.fullname + "\nStatus: " + status
             });
     });
 </script>
